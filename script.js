@@ -37,7 +37,7 @@ function pushToSpin() {
   const sloter3 = randomSlotIcon(icons);
   const sloter4 = randomSlotIcon(icons);
 
-  icon1.src = `${sloter1} `
+  icon1.src = `${sloter1}`
   icon2.src = `${sloter2}`
   icon3.src = `${sloter3}`
   icon4.src = `${sloter4}`
