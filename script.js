@@ -50,3 +50,15 @@ function pushToSpin(){
 function winner(){
   document.getElementById("winnermassage").className="main-slot-winner-good container pt-5";
 };
+
+function masterKey() {
+  let pss = prompt("Enter Master Key");
+  if(pss === "1234"){
+   icon1.src=`./img/777.jpeg` 
+  icon2.src=`./img/777.jpeg`
+  icon3.src=`./img/777.jpeg`
+  icon4.src=`./img/777.jpeg`
+   
+  }
+  
+}
