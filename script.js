@@ -1,22 +1,22 @@
 const icons=new Array();
 icons[0]=new Image();
-icons[0]=`/img/777.jpeg`
+icons[0]=`./img/777.jpeg`
 icons[1]=new Image()
-icons[1]=`/img/bar.jpeg`
+icons[1]=`./img/bar.jpeg`
 icons[2]=new Image()
-icons[2]=`/img/bell.jpeg`
+icons[2]=`./img/bell.jpeg`
 icons[3]=new Image()
-icons[3]=`/img/cherry.jpeg`
+icons[3]=`./img/cherry.jpeg`
 icons[4]=new Image()
-icons[4]=`/img/diamond.jpeg`
+icons[4]=`./img/diamond.jpeg`
 icons[5]=new Image()
-icons[5]=`/img/heart.jpeg`
+icons[5]=`./img/heart.jpeg`
 icons[6]=new Image()
-icons[6]=`/img/horseshoe.jpeg`
+icons[6]=`./img/horseshoe.jpeg`
 icons[7]=new Image()
-icons[7]=`/img/lemon.jpeg`
+icons[7]=`./img/lemon.jpeg`
 icons[8]=new Image()
-icons[8]=`/img/watermelon.jpeg`
+icons[8]=`./img/watermelon.jpeg`
 
 console.log(icons);
 
