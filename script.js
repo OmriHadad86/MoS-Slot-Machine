@@ -25,7 +25,6 @@ function randomSlotIcon(icons) {
   return icons[Math.floor(Math.random() * icons.length)]
 }
 
-
 function pushToSpin() {
   const icon1 = document.getElementById("icon1");
   const icon2 = document.getElementById("icon2");
@@ -37,7 +36,7 @@ function pushToSpin() {
   const sloter3 = randomSlotIcon(icons);
   const sloter4 = randomSlotIcon(icons);
 
-  icon1.src = `${sloter1}`
+  icon1.src = `${sloter1} `
   icon2.src = `${sloter2}`
   icon3.src = `${sloter3}`
   icon4.src = `${sloter4}`
