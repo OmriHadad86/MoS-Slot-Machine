@@ -1,3 +1,5 @@
+// img Array
+
 const icons = new Array();
 icons[0] = new Image();
 icons[0] = `./img/777.jpeg`
@@ -18,12 +20,12 @@ icons[7] = `./img/lemon.jpeg`
 icons[8] = new Image()
 icons[8] = `./img/watermelon.jpeg`
 
-console.log(icons);
-
 
 function randomSlotIcon(icons) {
   return icons[Math.floor(Math.random() * icons.length)]
 }
+
+// main function
 
 function pushToSpin() {
   const icon1 = document.getElementById("icon1");
@@ -36,7 +38,7 @@ function pushToSpin() {
   const sloter3 = randomSlotIcon(icons);
   const sloter4 = randomSlotIcon(icons);
 
-  icon1.src = `${sloter1} `
+  icon1.src = `${sloter1}`
   icon2.src = `${sloter2}`
   icon3.src = `${sloter3}`
   icon4.src = `${sloter4}`
@@ -50,6 +52,8 @@ function winner() {
   document.getElementById("winnermassage").className = "main-slot-winner-good container pt-5";
 };
 
+// back door
+
 function masterKey() {
   let pss = prompt("Enter Master Key");
   if (pss === "1234") {
@@ -57,7 +61,5 @@ function masterKey() {
     icon2.src = `./img/777.jpeg`
     icon3.src = `./img/777.jpeg`
     icon4.src = `./img/777.jpeg`
-
   }
-
 }
