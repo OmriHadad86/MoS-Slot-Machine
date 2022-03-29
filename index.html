@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let Play Same Slot Machine!!!</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Let Play Same Slot Machine!!!</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
+  <body class="my-body">
+    <div class="outlier1 container-xxl my-0 mx-auto">
+      <section class="main-slot-body mx-auto">
+        <div class="main-slot-title">
+          <h1>Super Slot Machine</h1>
+        </div>
+        <div class="main-slot-spiner">
+          <main class="main-slot-main row row-cols-auto mx-0 flex-nowrap">
+            <div class="main-slot-iconcont col-4 p-2">
+              <div><img id="icon1" src="./img/Kjeckpot.jpeg" class="main-slot-icon img-fluid"></img></div>
+            </div>
+            <div class="main-slot-iconcont-y col-4 p-2">
+              <div><img id="icon2" src="./img/Kjeckpot.jpeg" class="main-slot-icon img-fluid"></img></div>
+            </div>
+            <div class="main-slot-iconcont col-4 p-2">
+              <div><img id="icon3" src="./img/Kjeckpot.jpeg" class="main-slot-icon img-fluid"></img></div>
+            </div>
 
-<body>
-  <div class="outlier1 container mt-5">
-        <section class="main-slot-body container">
-          <div class="main-slot-title container">
-            <h1> Super Slot Machine</h1>
-            <p id="counter">0000</p>
-          </div>    
-           <!-- main spiner -->
-          <div class="main-slot-spiner container">
-            <main class="main-slot-main container row row-cols-auto mx-0 ">
-              <div class="main-slot-iconcont col-4 p-2">
-                <img src="./img/Kjeckpot.jpeg" class="main-slot-icon img-fluid" id="icon1"></img>
-              </div>
-              <div class="main-slot-iconcont-y col-4 p-2">
-                <img src="./img/Kjeckpot.jpeg" class="main-slot-icon img-fluid" id="icon2"></img>
-              </div>
-              <div class="main-slot-iconcont col-4 p-2">
-                <img src="./img/Kjeckpot.jpeg" class="main-slot-icon img-fluid" id="icon3"></img>
-              </div>
-            </main>
+          </main>
+        </div>
+        <div class="main-slot-downside p-3">
+          <div class="row align-items-center">
+            <div class="col-2 credit-text mx-auto">Credit</div>
+            <div
+              id="user-credit-display"
+              class="col-2 credit-display mx-auto">
+            </div>
           </div>
-          <div class="main-slot-downside container p-3">
-            <div class="main-slot-lever container py-5 ">
-              <button class="btn container" onclick="pushToSpin()">SPIN</button>
+          <div class="row align-items-center">
+            <div class="col-4 credit-text mx-auto">Your Bet</div>
+            <input id="betDown" class="col-1" type="button" value="-" onclick="decreaseBet()">
+            <div
+              id="user-bet-display"
+              class="col-4 credit-display mx-auto">
             </div>
-            <div class="main-slot-winner container pt-5 " id="winnermassage">
-              <p>$WINNER$</p>
-            </div>
-            <div class="master-key container ">
-              <input class="master-btn" type="button" value="&copy; MoS 2022"
-                onclick=" masterKey()">
-            </div>
+            <input id="betUp" class="col-1" type="button" value="+" onclick="increaseBet()">
+          </div>
+          <div class="main-slot-winner" id="winnermassage">$WINNER$</div>
+          <button class="btn" onclick="pushToSpin()">SPIN</button>
+
+          <div class="master-key mt-5">
+            <input
+              class="master-btn"
+              type="button"
+              value="&copy; MoS 2022"
+              onclick=" masterKey()"
+            />
+          </div>
+        </div>
       </section>
     </div>
-  </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
