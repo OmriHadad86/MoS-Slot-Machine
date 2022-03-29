@@ -20,7 +20,7 @@ let userCredit = 1000;
 let creditDisplay = document.getElementById("user-credit-display");
 creditDisplay.innerText = userCredit;
 
-let userBet = 1;
+let userBet = 1; 
 let BetDisplay = document.getElementById("user-bet-display");
 BetDisplay.innerText = userBet;
 
