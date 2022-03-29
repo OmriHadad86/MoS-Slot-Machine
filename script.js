@@ -16,7 +16,7 @@ let [seven, bar, bell, cherry, diamond, heart, horseshoe, lemon, watermelon] =
 let prize = icons.prize;
 let userWins = 0;
 
-let userCredit = 1000;
+let userCredit = 100;
 let creditDisplay = document.getElementById("user-credit-display");
 creditDisplay.innerText = userCredit;
 
@@ -27,6 +27,7 @@ BetDisplay.innerText = userBet;
 function increaseBet() {
   userBet++;
   BetDisplay.innerText = userBet;
+  insertS.play()
 }
 
 function decreaseBet() {
@@ -36,6 +37,7 @@ function decreaseBet() {
   }
   userBet--;
   BetDisplay.innerText = userBet;
+  insertS.play()
 }
 
 function masterKey() {
@@ -58,6 +60,8 @@ function renderCredit() {
 function winner() {
   document.getElementById("winnermassage").className =
     "main-slot-winner-good pt-3";
+    coinsS.play()
+
 }
 
 function randomImg() {
@@ -94,11 +98,21 @@ function pushToSpin() {
 
   if (userCredit < userBet) {
     alert("Not enough credit!");
+    gameOverS.play()
     return;
   } else {
     userCredit = userCredit - userBet;
     renderCredit();
     randomImg();
     checkForWin();
+    pullS.play()
+    coinsS.pause()
   }
 }
+
+// sounds=====>
+
+const pullS = new Audio("./sound/Slot Machine Pull 1 - QuickSounds.com.mp3");
+const insertS = new Audio("./sound/Slot Machine Coin Insert - QuickSounds.com.mp3")
+const coinsS = new Audio("./sound/Coins Dropping Out Of Slot Machine - QuickSounds.com.mp3")
+const gameOverS = new Audio("./sound/Stay with us folks.mp3")

@@ -61,16 +61,22 @@
   padding-block: 0px;
   padding-inline: 10px;
 }
+.main-slot-title {
+  background: rgb(114, 165, 64);
+}
 
 .outlier1 {
   max-height: 800px;
 }
-/* ------------------------------------ */
+
+.my-body {
+  background-image: url("./img/bodyKB.jpg");
+}
 
 h1 {
   font-size: 4em;
   color: rgb(11, 238, 3);
-  text-shadow: 0 5px 8px rgb(42, 75, 4);
+  text-shadow: 0 5px 8px rgb(30, 39, 19);
 }
 .btn {
   font-size: 2em;
