@@ -24,10 +24,15 @@ let userBet = 1;
 let BetDisplay = document.getElementById("user-bet-display");
 BetDisplay.innerText = userBet;
 
+const betUpBtn = document.getElementById("betUp")
+const downBetBtn = document.getElementById("betDown")
+
+
 function increaseBet() {
   userBet++;
   BetDisplay.innerText = userBet;
   insertS.play()
+   pauseBetAction(betUpBtn)
 }
 
 function decreaseBet() {
@@ -38,8 +43,17 @@ function decreaseBet() {
   userBet--;
   BetDisplay.innerText = userBet;
   insertS.play()
+  pauseBetAction(betDown)
 }
+function pauseBetAction(button) {
+    let disbutton = button.value;
 
+    button.setAttribute('disabled', true);
+    setTimeout(()=>{
+        button.value = disbutton;
+        button.removeAttribute('disabled');
+    }, 1000)
+}
 function masterKey() {
   let pss = prompt("Enter password");
   if (pss === "1234") {
@@ -81,6 +95,18 @@ function thePrize() {
   userCredit = userCredit + userBet * prize;
 }
 
+
+ const spinbtn =document.getElementById("spinbtn");
+function pauseAction(button) {
+    let disbutton = button.value;
+
+    button.setAttribute('disabled', true);
+    setTimeout(()=>{
+        button.value = disbutton;
+        button.removeAttribute('disabled');
+    }, 3000)
+}
+
 function pushToSpin() {
   const icon1 = document.getElementById("icon1");
   const icon2 = document.getElementById("icon2");
@@ -102,11 +128,13 @@ function pushToSpin() {
     return;
   } else {
     userCredit = userCredit - userBet;
+    
     renderCredit();
     randomImg();
     checkForWin();
     pullS.play()
     coinsS.pause()
+    pauseAction(spinbtn)
   }
 }
 
