@@ -1,14 +1,14 @@
 .main-slot-icon {
   color: rgb(245, 203, 17);
 }
-.main-slot-winner-good {
+/* .main-slot-winner-good {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: rgb(241, 45, 19);
   text-align: center;
   text-shadow: 0 5px 7px rgb(181, 240, 20);
   font-size: 5em;
-  /* animation:  */
-}
+  animation: 
+} */
 .main-slot-winner {
   display: none;
 }
@@ -96,4 +96,78 @@ h1 {
 .master-btn {
   color: rgb(34, 68, 28);
   border-radius: 5px;
+}
+
+/* anim */
+
+.main-slot-winner-good {
+  position: relative;
+}
+.main-slot-winner-good span {
+  position: relative;
+  display: inline-block;
+  font-size: 70px;
+  color: rgb(240, 16, 16);
+  text-shadow: 0 5px 8px rgb(245, 203, 17);
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.4s * (--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+.anim span {
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  margin: -280px 40px 54px -34px;
+  background: url("./img/coinss.png");
+  background-size: contain;
+  animation: anim 3s infinite linear;
+}
+.anim span:nth-child(7h) {
+  animation-delay: 2.5s;
+}
+.anim span:nth-child(7n-1) {
+  animation-delay: 1s;
+}
+.anim span:nth-child(7n-2) {
+  animation-delay: 3.5s;
+}
+.anim span:nth-child(7n-3) {
+  animation-delay: 5s;
+}
+.anim span:nth-child(7n-4) {
+  animation-delay: 1.5s;
+}
+.anim span:nth-child(7n-5) {
+  animation-delay: 7s;
+}
+.anim span:nth-child(7n-6) {
+  animation-delay: 9.5s;
+}
+
+@keyframes anim {
+  0% {
+    width: 75px;
+    height: 75px;
+    opacity: 1;
+    transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 75px;
+    height: 75px;
+    opacity: 1;
+    transform: translate(100px, 900px) rotateZ(270deg);
+  }
+  100% {
+    width: 75px;
+    height: 75px;
+    opacity: 0;
+    transform: translate(150px, 900px) rotateZ(360deg);
+  }
 }

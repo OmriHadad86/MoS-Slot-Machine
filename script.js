@@ -61,7 +61,9 @@ function masterKey() {
     icon2.src = `./img/777.jpeg`;
     icon3.src = `./img/777.jpeg`;
     winner();
-    renderCredit(userCredit=1000);
+    coinsD();
+    coinsS.play()
+    renderCredit(userCredit=100);
     return;
   }
   alert("Wrong password");
@@ -74,7 +76,7 @@ function renderCredit() {
 function winner() {
   document.getElementById("winnermassage").className =
     "main-slot-winner-good pt-3";
-    coinsS.play()
+    
 
 }
 
@@ -83,9 +85,12 @@ function randomImg() {
 }
 
 function checkForWin() {
-  if (icon1.src === icon2.src && icon1.src === icon3.src) {
-    winner();
-    thePrize();
+  if (icon1.src === icon2.src && icon2.src === icon3.src) {
+   winner();
+    coinsD();
+    coinsS.play()
+    thePrize()
+
   } else {
     document.getElementById("winnermassage").className = "main-slot-winner";
   }
@@ -123,18 +128,20 @@ function pushToSpin() {
   prize = `${slot1.prize}`;
 
   if (userCredit < userBet) {
-    alert("Not enough credit!");
     gameOverS.play()
+    alert("Not enough credit!");
     return;
   } else {
     userCredit = userCredit - userBet;
     
+   
     renderCredit();
     randomImg();
-    checkForWin();
     pullS.play()
     coinsS.pause()
     pauseAction(spinbtn)
+    coinsAtniD()
+     checkForWin();
   }
 }
 
@@ -144,3 +151,11 @@ const pullS = new Audio("./sound/Slot Machine Pull 1 - QuickSounds.com.mp3");
 const insertS = new Audio("./sound/Slot Machine Coin Insert - QuickSounds.com.mp3")
 const coinsS = new Audio("./sound/Coins Dropping Out Of Slot Machine - QuickSounds.com.mp3")
 const gameOverS = new Audio("./sound/Stay with us folks.mp3")
+
+const coinsDrups = document.getElementById("coinsdrups")
+function coinsD(){
+  coinsDrups.className="anim"
+}
+function coinsAtniD(){
+  coinsDrups.className=""
+}
