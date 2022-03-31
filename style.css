@@ -1,14 +1,6 @@
 .main-slot-icon {
   color: rgb(245, 203, 17);
 }
-/* .main-slot-winner-good {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: rgb(241, 45, 19);
-  text-align: center;
-  text-shadow: 0 5px 7px rgb(181, 240, 20);
-  font-size: 5em;
-  animation: 
-} */
 .main-slot-winner {
   display: none;
 }
