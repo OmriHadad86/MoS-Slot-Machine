@@ -109,7 +109,7 @@ function pauseAction(button) {
     setTimeout(()=>{
         button.value = disbutton;
         button.removeAttribute('disabled');
-    }, 3000)
+    }, 2500)
 }
 
 function pushToSpin() {
@@ -151,6 +151,8 @@ const pullS = new Audio("./sound/Slot Machine Pull 1 - QuickSounds.com.mp3");
 const insertS = new Audio("./sound/Slot Machine Coin Insert - QuickSounds.com.mp3")
 const coinsS = new Audio("./sound/Coins Dropping Out Of Slot Machine - QuickSounds.com.mp3")
 const gameOverS = new Audio("./sound/Stay with us folks.mp3")
+
+// Animation ====>
 
 const coinsDrups = document.getElementById("coinsdrups")
 function coinsD(){
