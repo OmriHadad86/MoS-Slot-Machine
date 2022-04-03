@@ -131,7 +131,7 @@ function pushToSpin() {
     gameOverS.play()
     alert("Not enough credit!");
     return;
-  } else {
+  } 
     userCredit = userCredit - userBet;
     
    
@@ -142,7 +142,7 @@ function pushToSpin() {
     pauseAction(spinbtn)
     coinsAtniD()
      checkForWin();
-  }
+  
 }
 
 // sounds=====>
