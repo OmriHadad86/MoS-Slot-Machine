@@ -28,15 +28,26 @@
   }
 }
 
+@media screen and (min-width: 1060px) {
+  .my-body {
+    background-image: url("./img/bodyKB.jpg");
+    background-size: cover;
+  }
+}
+
 .main-slot-iconcont {
   min-width: 100px;
   min-height: 100px;
 }
 
 .main-slot-downside {
-  max-height: 700px;
+  max-height: min-content;
   background-image: url("./img/kermit.jpeg");
   background-position: 50%;
+}
+
+.heigth-fix {
+  min-height: fit-content;
 }
 
 .credit-text {
@@ -79,10 +90,6 @@
   max-height: 800px;
 }
 
-.my-body {
-  background-image: url("./img/bodyKB.jpg");
-}
-
 h1 {
   font-size: 4em;
   color: rgb(11, 238, 3);
@@ -112,19 +119,45 @@ h1 {
 
 /* anim */
 
+.angry-animate {
+  -webkit-animation: rotate 1s ease-in-out 0s 2 normal;
+  -moz-animation: rotate 1s ease-in-out 0s 2 normal;
+  -ms-animation: rotate 1s ease-in-out 0s 2 normal;
+  animation: rotate 1s ease-in-out 0s 2 normal;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .main-slot-winner-good {
   position: relative;
 }
 .main-slot-winner-good span {
   position: relative;
   display: inline-block;
-  font-size: 8em;
+  font-size: 100px;
   color: rgb(240, 16, 16);
   text-shadow: 0 5px 8px rgb(245, 203, 17);
   text-transform: uppercase;
   animation: flip 2s infinite;
   animation-delay: calc(0.4s * (--i));
 }
+
+@media screen and (max-width: 515px) {
+  .main-slot-winner-good span {
+    font-size: 65px;
+  }
+}
+
 @keyframes flip {
   0%,
   80% {

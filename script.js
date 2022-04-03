@@ -112,13 +112,10 @@ function pauseAction(button) {
     }, 2500)
 }
 
-
-
-const icon1 = document.getElementById("icon1");
-const icon2 = document.getElementById("icon2");
-const icon3 = document.getElementById("icon3");
-
 function pushToSpin() {
+  const icon1 = document.getElementById("icon1");
+  const icon2 = document.getElementById("icon2");
+  const icon3 = document.getElementById("icon3");
 
   const slot1 = randomImg(icons);
   const slot2 = randomImg(icons);
@@ -137,7 +134,7 @@ function pushToSpin() {
   } else {
     userCredit = userCredit - userBet;
     
-  
+   
     renderCredit();
     randomImg();
     pullS.play()
